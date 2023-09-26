@@ -27,6 +27,8 @@ Once mounted, it could look like this:
 
 - obsClean.dat : list of observatories
 
+- astrolabe_*pdf: a set of example output for the VLT
+
 ## Usage
 
 - Astrolabe.py CGIobs  CODE  POLAR INOUTSIDE
