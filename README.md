@@ -13,7 +13,7 @@ The plots will look like this:
 ![astrolabe plot](AstrolabePlot.png)
 
 Once mounted, it could look like this:
-![astrolabe plot](AstrolabePro.png)
+![astrolabe photo](AstrolabePro.jpg)
 
 ## Files
 
