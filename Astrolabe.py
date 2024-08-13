@@ -53,7 +53,7 @@ doRete = True
 doPlate = True
 doRule = True
 #======================================================================
-if 0:
+if 1:
     astpath = '/home/ohainaut/public_html/astrolabe/'
     outpath = '/home/ohainaut/public_html/outsideWorld/'
     pubweb = 'https://www.eso.org/~ohainaut/outsideWorld/'
@@ -502,8 +502,8 @@ def plot_landold():
     #- landold standard fields
     landData = np.loadtxt(landFile,
             dtype={'names': ('j1','j2','rh','rm','rs','dd','dm','ds','j3','name'),
-               'formats':(np.float,np.float,np.float,np.float,
-                          np.float,np.float,np.float,np.float,np.float,'|S15')})
+               'formats':(float,float,float,float,
+                          float,float,float,float,float,'|S15')})
     landData = ascii.read(landFile, delimiter=' ')
     # ii, ik, RAH, RAM, RAS, DDE, DM, DS, j, ID
     landRA = 15.*(landData['col3'] + landData['col4']/60. + landData['col5']/3600.)
@@ -1229,7 +1229,7 @@ def plot_rule():
             horizontalalignment='center',
             verticalalignment='center')
 
-        
+
 #===========================================================================
 #===========================================================================
 #===========================================================================
@@ -1261,7 +1261,7 @@ if len(sys.argv) == 1: # [0] is the name of the command...
     
 elif sys.argv[1] == 'CGIband':
     xlong = 0.
-    xlat =  np.float(sys.argv[2])
+    xlat =  float(sys.argv[2])
     xlatband = 5.
     band = True
     obs = ' '
@@ -1273,8 +1273,8 @@ elif sys.argv[1] == 'CGIband':
                 tradOrient = 1
 
 elif sys.argv[1] == 'CGIcoo':
-    xlong = np.float(sys.argv[2])
-    xlat =  np.float(sys.argv[3])
+    xlong = float(sys.argv[2])
+    xlat =  float(sys.argv[3])
     obs = ' '
     obsname = ' '
     print( "<p>(AstrolabePY)<font size=-3 color=Gray><pre>")
@@ -1288,6 +1288,7 @@ elif sys.argv[1] == 'CGIcoo':
         
 elif sys.argv[1] == 'CGIobs':
     obs = sys.argv[2]
+    print( "<p>(AstrolabePY)<font size=-3 color=Gray><pre>")
     with open(obsFile) as in_file:
         for line in in_file:
             lobs,w = line.split("%")
@@ -1325,7 +1326,7 @@ print( 'Orientation: ', tradOrient, olab)
 
 
 
-# plot configuration ------- -------------------------------------------------
+# plot configuration -------------------------------------------------
 
 plotsize = 7.5 * 1.05 # in inch; will be reduced by 5% bc of margins
 
