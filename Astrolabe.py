@@ -53,7 +53,7 @@ doRete = True
 doPlate = True
 doRule = True
 #======================================================================
-if 1:
+if 0:  # for webtool
     astpath = '/home/ohainaut/public_html/astrolabe/'
     outpath = '/home/ohainaut/public_html/outsideWorld/'
     pubweb = 'https://www.eso.org/~ohainaut/outsideWorld/'
@@ -64,7 +64,7 @@ if 1:
     starFile = astpath+ 'src/hr.dat'
     constFile = astpath + 'src/const.dat'
     landFile = astpath+ 'src/landold.dat'
-else:
+else:  # for local
     astpath = os.path.dirname(__file__)
     outpath = './'
     pubweb = './'
